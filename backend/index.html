@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>銘柄検索ボット</title>
+</head>
+<body>
+<script src="https://riversun.github.io/chatux/chatux.min.js"></script>
+<script>
+    const chatux = new ChatUx();
+
+ const initParam =
+        {
+            renderMode: 'auto',
+            api: {
+                //echo chat server
+                endpoint: 'http://localhost:8080/chat',
+                method: 'GET',
+                dataType: 'json'
+            },
+            bot: {
+                botPhoto: 'https://1.bp.blogspot.com/-U-God4u2s7Q/VdLsEO8pS9I/AAAAAAAAw2w/CucJpIwog34/s400/vegetable_kyouyasai_syougoin_daikon.png',
+                humanPhoto: null,
+                widget: {
+                    sendLabel: '検索',
+                    placeHolder: 'キーワードを入力してください'
+                }
+            },
+            window: {
+                title: '銘柄検索ボット',
+                infoUrl: 'https://github.com/RuBisCO28/KabuChatServer'
+            }
+        };
+    chatux.init(initParam);
+    chatux.start(true);
+
+</script>
+</body>
+</html>

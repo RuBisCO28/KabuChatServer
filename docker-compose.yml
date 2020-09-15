@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  backend:
+    build: ./backend
+    image: backend-image
+    container_name: backend1
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      PORT: 8000
+
